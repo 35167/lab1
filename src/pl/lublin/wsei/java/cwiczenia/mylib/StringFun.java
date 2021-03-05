@@ -50,4 +50,16 @@ public class StringFun {
         return temp;
     }
 
+    public static String camelize(String word) {
+        String output = "";
+        String[] words = word.split(" ");
+
+        for(int i=0; i < words.length; i++){
+            words[i] = StringUtils.capitalize(words[i]);
+            output = StringUtils.join(words);
+        }
+        return output;
+    }
+
+
 }

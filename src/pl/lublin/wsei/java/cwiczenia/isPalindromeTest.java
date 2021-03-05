@@ -18,9 +18,13 @@ public class isPalindromeTest {
                     "jest palindromem \n");
         }while (true);
    */
+   /*
         System.out.println("Podaj tekst do zmiany");
         String tekst = scn.next();
         System.out.println(StringFun.anarchize(tekst));
-
+    */
+        System.out.println("Podaj tekst do zmiany");
+        String tekst = scn.nextLine();
+        System.out.println(StringFun.camelize(tekst));
     }
 }
