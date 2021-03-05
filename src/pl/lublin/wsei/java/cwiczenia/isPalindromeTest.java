@@ -9,10 +9,12 @@ public class isPalindromeTest {
     public static void main(String[] args){
         Scanner scn = new Scanner(System.in);
         do{
-            System.out.println("Podaj tekst do sprawdzenia");
+            System.out.println(" Podaj tekst do sprawdzenia");
             String tekst = scn.next();
             if (tekst.equals("0")) break;
-            System.out.print("Tekst: " + tekst + (StringFun.isPalindrome(tekst) ? "" : "nie ")+ "jest palindromem");
+            System.out.print("Tekst: " + tekst +" " +
+                    (StringFun.isPalindrome(tekst) ? "" : " nie ")+
+                    "jest palindromem \n");
         }while (true);
     }
 }
