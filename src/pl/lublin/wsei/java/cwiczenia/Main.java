@@ -9,11 +9,11 @@ public class Main {
     public static void main(String[] args) {
 
         Account acc = new Account();
-        acc.setName = "piotr Gołabek";
+        acc.setName("piotr Gołabek");
         System.out.println(acc.getName());
 
 
-        Scanner input = new Scanner(System.in);
+     //   Scanner input = new Scanner(System.in);
 	//komentarz
     /*
     również komentarz
