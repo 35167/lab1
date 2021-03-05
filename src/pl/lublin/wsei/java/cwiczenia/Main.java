@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) {
 
         Account acc = new Account();
-        acc.setName("piotr Gołabek");
+        acc.setName("абв абвабв");
         System.out.println(acc.getName());
 
 
