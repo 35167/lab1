@@ -11,7 +11,7 @@ public class isPalindromeTest {
  /*
         do{
             System.out.println(" Podaj tekst do sprawdzenia");
-            String tekst = scn.next();
+            String tekst = scn.nextLine();
             if (tekst.equals("0")) break;
             System.out.print("Tekst: " + tekst +" " +
                     (StringFun.isPalindrome(tekst) ? "" : " nie ")+
@@ -23,8 +23,15 @@ public class isPalindromeTest {
         String tekst = scn.next();
         System.out.println(StringFun.anarchize(tekst));
     */
+
+    /*
         System.out.println("Podaj tekst do zmiany");
         String tekst = scn.nextLine();
         System.out.println(StringFun.camelize(tekst));
+    */
+        System.out.println("Podaj tekst do zmiany");
+        String tekst = scn.nextLine();
+        System.out.println(StringFun.shufle(tekst));
+
     }
 }

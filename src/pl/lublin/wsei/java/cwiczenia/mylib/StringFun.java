@@ -3,7 +3,8 @@ package pl.lublin.wsei.java.cwiczenia.mylib;
 import org.apache.commons.lang3.StringUtils;
 import pl.lublin.wsei.java.cwiczenia.isPalindromeTest;
 
-import java.util.Locale;
+import java.util.*;
+
 
 public class StringFun {
     public static boolean isPalindrome(String word){
@@ -58,6 +59,20 @@ public class StringFun {
             words[i] = StringUtils.capitalize(words[i]);
             output = StringUtils.join(words);
         }
+        return output;
+    }
+
+    public static String shufle(String word){
+
+
+        char[] chartab = word.toCharArray();
+        char[] chartabstring = chartab;
+        Random rnd = new Random();
+        for(int i = 0; i < chartab.length; i++){
+            System.out.println();
+            chartabstring[i] += chartab[rnd.nextInt(chartab.length-1)];
+        }
+        String output = new String(chartabstring);
         return output;
     }
 
