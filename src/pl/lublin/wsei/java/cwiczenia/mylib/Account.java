@@ -43,15 +43,16 @@ public static String translit(String arg)
             "k","l","m","n","o","p","r","s","t","u","f","h","c",
             "ch","sh","shh","'","ju","ja"};
     String[] tokens = StringUtils.split(arg);
+    String output = "";
     for(int i = 0; i < tokens.length; i++)
         for(int j = 0; j < ukrAlphabet.length(); j++){
   //          String s = Character.toString(ukrAlphabet.charAt(i));
-            if(tokens[i] == Character.toString(ukrAlphabet.charAt(j)){
-                String temp = translitRepl[j];
+            if(tokens[i] == Character.toString(ukrAlphabet.charAt(j))){
+                output = output + translitRepl[j];
                 break;
             }
         }
-    return StringUtils.join(tokens,' ');
+    return output;
 }
     public void setName(String name) {
         this.name = translit(name);
