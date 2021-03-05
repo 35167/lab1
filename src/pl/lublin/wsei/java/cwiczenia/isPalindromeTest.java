@@ -8,6 +8,7 @@ public class isPalindromeTest {
 
     public static void main(String[] args){
         Scanner scn = new Scanner(System.in);
+ /*
         do{
             System.out.println(" Podaj tekst do sprawdzenia");
             String tekst = scn.next();
@@ -16,5 +17,10 @@ public class isPalindromeTest {
                     (StringFun.isPalindrome(tekst) ? "" : " nie ")+
                     "jest palindromem \n");
         }while (true);
+   */
+        System.out.println("Podaj tekst do zmiany");
+        String tekst = scn.next();
+        System.out.println(StringFun.anarchize(tekst));
+
     }
 }

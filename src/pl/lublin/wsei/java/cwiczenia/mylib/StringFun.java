@@ -3,6 +3,8 @@ package pl.lublin.wsei.java.cwiczenia.mylib;
 import org.apache.commons.lang3.StringUtils;
 import pl.lublin.wsei.java.cwiczenia.isPalindromeTest;
 
+import java.util.Locale;
+
 public class StringFun {
     public static boolean isPalindrome(String word){
         boolean output;
@@ -31,4 +33,21 @@ public class StringFun {
         System.out.println(output);
         return output;
     }
+
+    public static String anarchize(String word) {
+        String temp = word;
+        String output = "";
+        char[] chartab = word.toCharArray();
+
+        for(int i = 0; i < chartab.length; i++) {
+            if(i%2 == 0) {
+                temp += temp.substring(i, chartab.length).toLowerCase() + "\n";
+            }else {
+                temp += temp.substring(i, chartab.length).toUpperCase() + "\n";
+            }
+        }
+
+        return temp;
+    }
+
 }
