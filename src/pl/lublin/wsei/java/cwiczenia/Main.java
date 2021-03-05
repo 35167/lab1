@@ -9,8 +9,8 @@ public class Main {
     public static void main(String[] args) {
 
         Account acc = new Account();
-        acc.name = "Piotr Gołabek";
-      //  System.out.println(acc.getName());
+        acc.setName = "piotr Gołabek";
+        System.out.println(acc.getName());
 
 
         Scanner input = new Scanner(System.in);
@@ -26,7 +26,7 @@ public class Main {
          * @return
           */
 
-        System.out.println("Jakis tekst");
+//        System.out.println("Jakis tekst");
 /*
         int a = 34;
         double b = 22.343;
