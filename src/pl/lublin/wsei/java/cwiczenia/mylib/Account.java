@@ -24,7 +24,7 @@ public class Account {
     public String getName() {
        return name;
     }
-
+/*
     public static String capitalize(String aStr)
     {
         String[] tokens = StringUtils.split(aStr);
@@ -35,5 +35,22 @@ public class Account {
     public void setName(String name) {
         this.name = capitalize(name);
     }
+*/
+public static String translit(String arg)
+{
+    String ukrAlphabet = "абвгдеєжзиіїйклмнопрстуфхцчшщьюя";
+    String[] translitRepl = {"a","b","v","g","d","e","je","zh","z","y","i","ji", "j",
+            "k","l","m","n","o","p","r","s","t","u","f","h","c",
+            "ch","sh","shh","'","ju","ja"};
+    String[] tokens = StringUtils.split(arg);
+    for(int i = 0; i < tokens.length; i++)
+        tokens[i] = String.atChar((tokens[i]));
+    return StringUtils.join(tokens,' ');
+}
+    public void setName(String name) {
+        this.name = translit(name);
+    }
+
+
 
 }
