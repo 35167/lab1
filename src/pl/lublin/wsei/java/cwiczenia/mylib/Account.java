@@ -44,7 +44,13 @@ public static String translit(String arg)
             "ch","sh","shh","'","ju","ja"};
     String[] tokens = StringUtils.split(arg);
     for(int i = 0; i < tokens.length; i++)
-        tokens[i] = String.atChar((tokens[i]));
+        for(int j = 0; j < ukrAlphabet.length(); j++){
+  //          String s = Character.toString(ukrAlphabet.charAt(i));
+            if(tokens[i] == Character.toString(ukrAlphabet.charAt(j)){
+                String temp = translitRepl[j];
+                break;
+            }
+        }
     return StringUtils.join(tokens,' ');
 }
     public void setName(String name) {
