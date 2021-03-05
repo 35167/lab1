@@ -39,23 +39,22 @@ public class Account {
 public static String translit(String arg)
 {
     String ukrAlphabet = "абвгдеєжзиіїйклмнопрстуфхцчшщьюя";
+    char[] ukrChar = ukrAlphabet.toCharArray();
     System.out.println(ukrAlphabet);
     String[] translitRepl = {"a","b","v","g","d","e","je","zh","z","y","i","ji", "j",
             "k","l","m","n","o","p","r","s","t","u","f","h","c",
             "ch","sh","shh","'","ju","ja"};
-    String[] tokens = StringUtils.split(arg);
-    String output = "";
-    System.out.println(output);
-    for(int i = 0; i < tokens.length; i++)
-        for(int j = 0; j < ukrAlphabet.length(); j++){
-            System.out.println("iter"+i +" | "+ j + "  " + tokens[i]);
-            if(tokens[i] == Character.toString(ukrAlphabet.charAt(j))){
+    char[] tokens = arg.toCharArray();
 
-                System.out.println(output);
+
+    String output = "";
+    for(int i = 0; i < tokens.length; i++)
+        for(int j = 0; j < ukrChar.length; j++){
+            if(tokens[i] == ukrChar[j]){
+                output = output + translitRepl[j];
                 break;
             }
         }
-    System.out.println(output);
     return output;
 }
     public void setName(String name) {
